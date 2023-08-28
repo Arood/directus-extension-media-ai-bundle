@@ -1,0 +1,60 @@
+{
+	"name": "directus-extension-directus-media-ai",
+	"version": "0.1.0",
+	"author": "Marcus Olovsson",
+	"license": "MIT",
+	"directus:extension": {
+		"host": "^9.23.1",
+		"type": "bundle",
+		"path": {
+			"app": "dist/app.js",
+			"api": "dist/api.js"
+		},
+		"entries": [
+			{
+				"type": "operation",
+				"name": "describe-image",
+				"source": {
+					"app": "src/operation-describe-image/app.ts",
+					"api": "src/operation-describe-image/api.ts"
+				}
+			},
+			{
+				"type": "operation",
+				"name": "extract-text-from-image",
+				"source": {
+					"app": "src/operation-extract-text-from-image/app.ts",
+					"api": "src/operation-extract-text-from-image/api.ts"
+				}
+			}
+		]
+	},
+	"description": "A collection of media-related AI extensions for Directus.",
+	"icon": "extension",
+	"keywords": [
+		"directus",
+		"directus-extension",
+		"directus-custom-bundle"
+	],
+	"scripts": {
+		"build": "directus-extension build",
+		"dev": "directus-extension build -w --no-minify",
+		"link": "directus-extension link",
+		"add": "directus-extension add"
+	},
+	"devDependencies": {
+		"@directus/extensions-sdk": "9.23.1",
+		"@types/node": "^20.5.6",
+		"typescript": "^5.2.2",
+		"vue": "^3.3.4"
+	},
+	"files": [
+    "dist"
+  ],
+	"dependencies": {
+		"@aws-sdk/client-rekognition": "^3.398.0",
+		"@directus/utils": "^10.0.9",
+		"axios": "^1.5.0",
+		"rollup-plugin-node-externals": "^6.1.1"
+	}
+}
