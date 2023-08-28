@@ -2,7 +2,7 @@
 
 This is a collection of media-related AI extensions for [Directus](https://directus.io), to help you enhance the file library in your next project.
 
-![Screenshot of a Flow example](preview.gif)
+![Screenshot of a Flow example](https://github.com/Arood/directus-extension-media-ai-bundle/blob/v0.1.0/preview.gif?raw=true)
 
 ---
 
